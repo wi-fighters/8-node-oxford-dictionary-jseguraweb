@@ -1,0 +1,24 @@
+{
+  "name": "8-node-oxford-dictionary-jseguraweb",
+  "version": "1.0.0",
+  "description": "### OxFord Dictionary",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wi-fighters/8-node-oxford-dictionary-jseguraweb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wi-fighters/8-node-oxford-dictionary-jseguraweb/issues"
+  },
+  "homepage": "https://github.com/wi-fighters/8-node-oxford-dictionary-jseguraweb#readme"
+}
