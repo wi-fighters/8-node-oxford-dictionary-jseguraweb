@@ -1,4 +1,7 @@
+#!/usr/bin/env node
+
 require('dotenv').config();
+const chalk = require('chalk');
 const axios = require('axios');
 
 const [word] = process.argv.slice(2);
@@ -21,14 +24,14 @@ axios(options)
 
         return results.map(el => {
             el.lexicalEntries.map(el => {
-                console.log(`\n* "${word}" (${el.lexicalCategory.text}):`);
+                console.log('\n' + chalk.hex('#c7c7c7')('*') + ' ' + chalk.cyan(`"${word}"`) + ' ' + chalk.green(`(${el.lexicalCategory.text})`) + ':');
 
                 el.entries[0].senses.map(el => {
                     definitions.push(el.definitions)
                 })
 
-                definitions.map((el, i) => console.log(`\t${i + 1}. ${el}`));
+                definitions.map((el, i) => console.log('\t' + chalk.yellow(`${i + 1}.`) + ' ' + el));
             })
         })
     })
-    .catch(error => console.log(error))
+    .catch(error => console.log(error));
